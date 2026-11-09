@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Про автора — Смачний блог</title>
+  <meta name="description" content="Хто веде кулінарний блог Смачний блог, чому він з’явився і як зв’язатися з автором.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header>
+  <div class="container bar">
+    <a class="logo" href="index.html">🍲 Смачний блог</a>
+    <nav id="nav">
+      <a href="index.html">Головна</a>
+      <a href="recipes.html">Рецепти</a>
+      <a href="about.html" class="active" aria-current="page">Про автора</a>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="themeBtn" aria-label="Перемкнути світлу/темну тему" title="Тема">🌙</button>
+      <button class="icon-btn burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main class="container about">
+  <h1>Про автора</h1>
+  <div class="about-grid">
+    <img class="author" src="images/author.svg" alt="Ілюстрація автора кулінарного блогу в кухарському ковпаку" width="400" height="400">
+    <div>
+      <p>Мене звати [Ваше ім’я]. Я люблю готувати й веду цей блог, щоб ділитися простими рецептами для щоденного меню.</p>
+      <h2>Про блог</h2>
+      <p>Усі рецепти я перевіряю на власній кухні. Якщо ви знайшли помилку або хочете запропонувати рецепт — напишіть мені.</p>
+    </div>
+  </div>
+  <h2>Мій шлях</h2>
+  <ol class="timeline">
+    <li><b>2024</b> — перші домашні рецепти для друзів.</li>
+    <li><b>2025</b> — створено перший сайт і зібрано добірку страв.</li>
+    <li><b>2026</b> — блог опубліковано в мережі.</li>
+  </ol>
+  <h2>Контакти</h2>
+  <p>Пошта: <a href="mailto:example@example.com">example@example.com</a></p>
+  <p><a class="btn" href="recipes.html">Перейти до рецептів</a></p>
+</main>
+<footer><div class="container"><p>&copy; 2026 Смачний блог. Тексти й ілюстрації — власні. Фото додаються з вказанням джерела.</p></div></footer>
+<button id="toTop" class="to-top" aria-label="Нагору">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

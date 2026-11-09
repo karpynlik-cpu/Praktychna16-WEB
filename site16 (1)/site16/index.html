@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Головна — Смачний блог</title>
+  <meta name="description" content="Кулінарний блог із простими домашніми рецептами: борщ, паста, сирники, вареники. Таймер, калькулятор порцій і улюблені рецепти.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <!-- Open Graph (додаткова дія варіанта 4) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Смачний блог">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:title" content="Смачний блог — прості домашні рецепти">
+  <meta property="og:description" content="Покрокові рецепти борщу, пасти, сирників та інших страв для щоденного меню.">
+  <meta property="og:url" content="https://mysite.infinityfreeapp.com/index.html">
+  <meta property="og:image" content="https://mysite.infinityfreeapp.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Логотип кулінарного блогу Смачний блог">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header>
+  <div class="container bar">
+    <a class="logo" href="index.html">🍲 Смачний блог</a>
+    <nav id="nav">
+      <a href="index.html" class="active" aria-current="page">Головна</a>
+      <a href="recipes.html">Рецепти</a>
+      <a href="about.html">Про автора</a>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="themeBtn" aria-label="Перемкнути світлу/темну тему" title="Тема">🌙</button>
+      <button class="icon-btn burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="container hero-in">
+    <div>
+      <h1>Смачний блог: прості рецепти для щоденного меню</h1>
+      <p class="lead">Перевірені домашні рецепти з доступних продуктів. Змінюйте кількість порцій, ставте таймер і зберігайте улюблене.</p>
+      <div class="hero-btns"><a class="btn" href="recipes.html">Усі рецепти</a><button class="btn ghost" id="randomBtn" type="button">🎲 Що приготувати сьогодні?</button></div>
+      <p id="randomOut" class="random-out" aria-live="polite"></p>
+    </div>
+    <div class="hero-art" aria-hidden="true">🍅🥘🍝</div>
+  </div>
+</section>
+<section class="container stats">
+  <div class="stat"><b data-count="6">0</b><span>рецептів</span></div>
+  <div class="stat"><b data-count="25">0</b><span>хвилин у середньому</span></div>
+  <div class="stat"><b data-count="5">0</b><span>категорій</span></div>
+</section>
+<section class="container">
+  <h2>Популярні рецепти</h2>
+  <div class="cards"><article class="card reveal" data-cat="Супи">
+  <a class="thumb" href="recipes.html#borscht"><img src="images/borscht.jpg" onerror="this.onerror=null;this.src='images/borscht.svg'" alt="Тарілка червоного борщу зі сметаною та кропом" loading="lazy" width="600" height="400"><span class="badge">Супи</span></a>
+  <div class="card-body"><h3>Український борщ</h3><p>Класичний борщ із буряком і капустою.</p>
+  <p class="meta">⏱ 120 хв · 📊 Середній</p>
+  <a class="btn small" href="recipes.html#borscht">Читати рецепт: український</a></div></article>
+<article class="card reveal" data-cat="Основні">
+  <a class="thumb" href="recipes.html#pasta"><img src="images/pasta.jpg" onerror="this.onerror=null;this.src='images/pasta.svg'" alt="Спагеті з томатним соусом і листками базиліка" loading="lazy" width="600" height="400"><span class="badge">Основні</span></a>
+  <div class="card-body"><h3>Паста з томатним соусом</h3><p>Вечеря за 20 хвилин із простих продуктів.</p>
+  <p class="meta">⏱ 20 хв · 📊 Легко</p>
+  <a class="btn small" href="recipes.html#pasta">Читати рецепт: паста</a></div></article>
+<article class="card reveal" data-cat="Сніданки">
+  <a class="thumb" href="recipes.html#syrnyky"><img src="images/syrnyky.jpg" onerror="this.onerror=null;this.src='images/syrnyky.svg'" alt="Стопка золотистих сирників з ягодами на тарілці" loading="lazy" width="600" height="400"><span class="badge">Сніданки</span></a>
+  <div class="card-body"><h3>Сирники</h3><p>Ніжні сирники на сніданок із ягодами.</p>
+  <p class="meta">⏱ 25 хв · 📊 Легко</p>
+  <a class="btn small" href="recipes.html#syrnyky">Читати рецепт: сирники</a></div></article>
+<article class="card reveal" data-cat="Основні">
+  <a class="thumb" href="recipes.html#varenyky"><img src="images/varenyky.jpg" onerror="this.onerror=null;this.src='images/varenyky.svg'" alt="Вареники з картоплею, цибулею та сметаною" loading="lazy" width="600" height="400"><span class="badge">Основні</span></a>
+  <div class="card-body"><h3>Вареники з картоплею</h3><p>Традиційні вареники з картопляною начинкою та цибулею.</p>
+  <p class="meta">⏱ 60 хв · 📊 Середній</p>
+  <a class="btn small" href="recipes.html#varenyky">Читати рецепт: вареники</a></div></article>
+<article class="card reveal" data-cat="Салати">
+  <a class="thumb" href="recipes.html#salad"><img src="images/salad.jpg" onerror="this.onerror=null;this.src='images/salad.svg'" alt="Грецький салат із помідорами, огірками, оливками та фетою" loading="lazy" width="600" height="400"><span class="badge">Салати</span></a>
+  <div class="card-body"><h3>Грецький салат</h3><p>Свіжий салат із овочів, оливок і сиру фета.</p>
+  <p class="meta">⏱ 10 хв · 📊 Легко</p>
+  <a class="btn small" href="recipes.html#salad">Читати рецепт: грецький</a></div></article>
+<article class="card reveal" data-cat="Десерти">
+  <a class="thumb" href="recipes.html#pie"><img src="images/pie.jpg" onerror="this.onerror=null;this.src='images/pie.svg'" alt="Яблучний пиріг із решітчастим верхом на тарілці" loading="lazy" width="600" height="400"><span class="badge">Десерти</span></a>
+  <div class="card-body"><h3>Яблучний пиріг</h3><p>Домашній пиріг із яблуками та корицею.</p>
+  <p class="meta">⏱ 70 хв · 📊 Середній</p>
+  <a class="btn small" href="recipes.html#pie">Читати рецепт: яблучний</a></div></article>
+</div>
+</section>
+</main>
+<footer><div class="container"><p>&copy; 2026 Смачний блог. Тексти й ілюстрації — власні. Фото додаються з вказанням джерела.</p></div></footer>
+<button id="toTop" class="to-top" aria-label="Нагору">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

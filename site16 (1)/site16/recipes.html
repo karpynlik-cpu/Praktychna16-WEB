@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Рецепти — Смачний блог</title>
+  <meta name="description" content="Рецепти борщу, пасти, сирників, вареників, салату й пирога: інгредієнти, калькулятор порцій, таймер і покрокові інструкції.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header>
+  <div class="container bar">
+    <a class="logo" href="index.html">🍲 Смачний блог</a>
+    <nav id="nav">
+      <a href="index.html">Головна</a>
+      <a href="recipes.html" class="active" aria-current="page">Рецепти</a>
+      <a href="about.html">Про автора</a>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="themeBtn" aria-label="Перемкнути світлу/темну тему" title="Тема">🌙</button>
+      <button class="icon-btn burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main class="container">
+  <h1>Рецепти</h1>
+  <div class="filters">
+    <input type="search" id="search" placeholder="🔍 Пошук рецепта…" aria-label="Пошук рецепта">
+    <div class="chips" id="chips"><button type="button" class="chip-btn on" data-f="Усі">Усі</button><button type="button" class="chip-btn" data-f="Десерти">Десерти</button><button type="button" class="chip-btn" data-f="Основні">Основні</button><button type="button" class="chip-btn" data-f="Салати">Салати</button><button type="button" class="chip-btn" data-f="Сніданки">Сніданки</button><button type="button" class="chip-btn" data-f="Супи">Супи</button><button type="button" class="chip-btn" data-f="❤ Улюблені">❤ Улюблені</button></div>
+    <label class="sort">Сортувати: <select id="sort"><option value="">За замовчуванням</option><option value="time">За часом</option><option value="name">За назвою</option></select></label>
+  </div>
+  <p id="empty" class="empty" hidden>Нічого не знайдено. Спробуйте інший запит.</p>
+  <div id="list"><article class="recipe reveal" id="borscht" data-cat="Супи" data-title="український борщ" data-time="120" data-base="6">
+  <div class="recipe-img"><img src="images/borscht.jpg" onerror="this.onerror=null;this.src='images/borscht.svg'" alt="Тарілка червоного борщу зі сметаною та кропом" loading="lazy" width="600" height="400"></div>
+  <div class="recipe-main">
+    <div class="recipe-head"><h2>Український борщ</h2><button class="fav" type="button" aria-label="Додати в улюблене" aria-pressed="false">♡</button></div>
+    <p class="meta"><span class="chip">Супи</span> ⏱ 120 хв · 📊 Середній</p>
+    <h3>Інгредієнти</h3>
+    <div class="servings">Порцій: <button type="button" class="step minus" aria-label="Менше">−</button><b class="srv">6</b><button type="button" class="step plus" aria-label="Більше">+</button></div>
+    <ul class="ing"><li data-amount="500" data-unit="г" data-name="м’ясо на кістці"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="2" data-unit="шт." data-name="буряк"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="300" data-unit="г" data-name="капуста"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="3" data-unit="шт." data-name="картопля"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="1" data-unit="шт." data-name="морква"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="1" data-unit="шт." data-name="цибуля"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="2" data-unit="ст. л." data-name="томатна паста"><label><input type="checkbox"> <span class="amt"></span></label></li><li><label><input type="checkbox"> сіль, лавровий лист, кріп</label></li></ul>
+    <h3>Приготування</h3>
+    <ol><li>Зваріть бульйон із м’яса приблизно 1,5 години.</li><li>Додайте нарізану картоплю та капусту.</li><li>Обсмажте буряк, моркву й цибулю з томатною пастою.</li><li>Додайте засмажку в борщ і варіть ще 15 хвилин.</li><li>Подавайте зі сметаною та кропом.</li></ol>
+    <div class="actions"><button class="btn small timer-btn" type="button" data-min="90">⏱ Таймер на 90 хв</button><button class="btn small ghost print-btn" type="button">🖨 Друк</button></div>
+    <p class="timer-out" aria-live="polite"></p>
+  </div></article>
+<article class="recipe reveal" id="pasta" data-cat="Основні" data-title="паста з томатним соусом" data-time="20" data-base="2">
+  <div class="recipe-img"><img src="images/pasta.jpg" onerror="this.onerror=null;this.src='images/pasta.svg'" alt="Спагеті з томатним соусом і листками базиліка" loading="lazy" width="600" height="400"></div>
+  <div class="recipe-main">
+    <div class="recipe-head"><h2>Паста з томатним соусом</h2><button class="fav" type="button" aria-label="Додати в улюблене" aria-pressed="false">♡</button></div>
+    <p class="meta"><span class="chip">Основні</span> ⏱ 20 хв · 📊 Легко</p>
+    <h3>Інгредієнти</h3>
+    <div class="servings">Порцій: <button type="button" class="step minus" aria-label="Менше">−</button><b class="srv">2</b><button type="button" class="step plus" aria-label="Більше">+</button></div>
+    <ul class="ing"><li data-amount="250" data-unit="г" data-name="спагеті"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="400" data-unit="г" data-name="томати у власному соку"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="2" data-unit="зубчики" data-name="часник"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="2" data-unit="ст. л." data-name="оливкова олія"><label><input type="checkbox"> <span class="amt"></span></label></li><li><label><input type="checkbox"> сіль, базилік</label></li></ul>
+    <h3>Приготування</h3>
+    <ol><li>Відваріть пасту до стану al dente.</li><li>Обсмажте часник в олії, додайте томати.</li><li>Тушкуйте соус 10 хвилин.</li><li>З’єднайте пасту з соусом і прикрасьте базиліком.</li></ol>
+    <div class="actions"><button class="btn small timer-btn" type="button" data-min="10">⏱ Таймер на 10 хв</button><button class="btn small ghost print-btn" type="button">🖨 Друк</button></div>
+    <p class="timer-out" aria-live="polite"></p>
+  </div></article>
+<article class="recipe reveal" id="syrnyky" data-cat="Сніданки" data-title="сирники" data-time="25" data-base="4">
+  <div class="recipe-img"><img src="images/syrnyky.jpg" onerror="this.onerror=null;this.src='images/syrnyky.svg'" alt="Стопка золотистих сирників з ягодами на тарілці" loading="lazy" width="600" height="400"></div>
+  <div class="recipe-main">
+    <div class="recipe-head"><h2>Сирники</h2><button class="fav" type="button" aria-label="Додати в улюблене" aria-pressed="false">♡</button></div>
+    <p class="meta"><span class="chip">Сніданки</span> ⏱ 25 хв · 📊 Легко</p>
+    <h3>Інгредієнти</h3>
+    <div class="servings">Порцій: <button type="button" class="step minus" aria-label="Менше">−</button><b class="srv">4</b><button type="button" class="step plus" aria-label="Більше">+</button></div>
+    <ul class="ing"><li data-amount="400" data-unit="г" data-name="сир"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="1" data-unit="шт." data-name="яйце"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="4" data-unit="ст. л." data-name="борошно"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="2" data-unit="ст. л." data-name="цукор"><label><input type="checkbox"> <span class="amt"></span></label></li><li><label><input type="checkbox"> щіпка солі, ваніль</label></li></ul>
+    <h3>Приготування</h3>
+    <ol><li>Змішайте всі інгредієнти до однорідності.</li><li>Сформуйте невеликі коржики й обваляйте в борошні.</li><li>Смажте по 3 хвилини з кожного боку.</li><li>Подавайте зі сметаною або ягодами.</li></ol>
+    <div class="actions"><button class="btn small timer-btn" type="button" data-min="6">⏱ Таймер на 6 хв</button><button class="btn small ghost print-btn" type="button">🖨 Друк</button></div>
+    <p class="timer-out" aria-live="polite"></p>
+  </div></article>
+<article class="recipe reveal" id="varenyky" data-cat="Основні" data-title="вареники з картоплею" data-time="60" data-base="4">
+  <div class="recipe-img"><img src="images/varenyky.jpg" onerror="this.onerror=null;this.src='images/varenyky.svg'" alt="Вареники з картоплею, цибулею та сметаною" loading="lazy" width="600" height="400"></div>
+  <div class="recipe-main">
+    <div class="recipe-head"><h2>Вареники з картоплею</h2><button class="fav" type="button" aria-label="Додати в улюблене" aria-pressed="false">♡</button></div>
+    <p class="meta"><span class="chip">Основні</span> ⏱ 60 хв · 📊 Середній</p>
+    <h3>Інгредієнти</h3>
+    <div class="servings">Порцій: <button type="button" class="step minus" aria-label="Менше">−</button><b class="srv">4</b><button type="button" class="step plus" aria-label="Більше">+</button></div>
+    <ul class="ing"><li data-amount="500" data-unit="г" data-name="борошно"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="250" data-unit="мл" data-name="тепла вода"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="600" data-unit="г" data-name="картопля"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="2" data-unit="шт." data-name="цибуля"><label><input type="checkbox"> <span class="amt"></span></label></li><li><label><input type="checkbox"> сіль, олія</label></li></ul>
+    <h3>Приготування</h3>
+    <ol><li>Замісіть тісто з борошна, води та солі, дайте відлежатися 30 хвилин.</li><li>Зваріть і потовчіть картоплю, додайте засмажену цибулю.</li><li>Розкачайте тісто, виріжте кружечки й залиште начинку.</li><li>Захистіть краї та варіть вареники 5 хвилин після спливання.</li></ol>
+    <div class="actions"><button class="btn small timer-btn" type="button" data-min="5">⏱ Таймер на 5 хв</button><button class="btn small ghost print-btn" type="button">🖨 Друк</button></div>
+    <p class="timer-out" aria-live="polite"></p>
+  </div></article>
+<article class="recipe reveal" id="salad" data-cat="Салати" data-title="грецький салат" data-time="10" data-base="2">
+  <div class="recipe-img"><img src="images/salad.jpg" onerror="this.onerror=null;this.src='images/salad.svg'" alt="Грецький салат із помідорами, огірками, оливками та фетою" loading="lazy" width="600" height="400"></div>
+  <div class="recipe-main">
+    <div class="recipe-head"><h2>Грецький салат</h2><button class="fav" type="button" aria-label="Додати в улюблене" aria-pressed="false">♡</button></div>
+    <p class="meta"><span class="chip">Салати</span> ⏱ 10 хв · 📊 Легко</p>
+    <h3>Інгредієнти</h3>
+    <div class="servings">Порцій: <button type="button" class="step minus" aria-label="Менше">−</button><b class="srv">2</b><button type="button" class="step plus" aria-label="Більше">+</button></div>
+    <ul class="ing"><li data-amount="2" data-unit="шт." data-name="помідори"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="1" data-unit="шт." data-name="огірок"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="100" data-unit="г" data-name="фета"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="10" data-unit="шт." data-name="оливки"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="1" data-unit="шт." data-name="червона цибуля"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="2" data-unit="ст. л." data-name="оливкова олія"><label><input type="checkbox"> <span class="amt"></span></label></li></ul>
+    <h3>Приготування</h3>
+    <ol><li>Наріжте овочі великими шматочками.</li><li>Додайте оливки й цибулю кільцями.</li><li>Викладіть фету зверху та полийте олією.</li></ol>
+    <div class="actions"><button class="btn small ghost print-btn" type="button">🖨 Друк</button></div>
+    <p class="timer-out" aria-live="polite"></p>
+  </div></article>
+<article class="recipe reveal" id="pie" data-cat="Десерти" data-title="яблучний пиріг" data-time="70" data-base="8">
+  <div class="recipe-img"><img src="images/pie.jpg" onerror="this.onerror=null;this.src='images/pie.svg'" alt="Яблучний пиріг із решітчастим верхом на тарілці" loading="lazy" width="600" height="400"></div>
+  <div class="recipe-main">
+    <div class="recipe-head"><h2>Яблучний пиріг</h2><button class="fav" type="button" aria-label="Додати в улюблене" aria-pressed="false">♡</button></div>
+    <p class="meta"><span class="chip">Десерти</span> ⏱ 70 хв · 📊 Середній</p>
+    <h3>Інгредієнти</h3>
+    <div class="servings">Порцій: <button type="button" class="step minus" aria-label="Менше">−</button><b class="srv">8</b><button type="button" class="step plus" aria-label="Більше">+</button></div>
+    <ul class="ing"><li data-amount="300" data-unit="г" data-name="борошно"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="150" data-unit="г" data-name="масло"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="100" data-unit="г" data-name="цукор"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="1" data-unit="шт." data-name="яйце"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="5" data-unit="шт." data-name="яблука"><label><input type="checkbox"> <span class="amt"></span></label></li><li data-amount="1" data-unit="ч. л." data-name="кориця"><label><input type="checkbox"> <span class="amt"></span></label></li></ul>
+    <h3>Приготування</h3>
+    <ol><li>Замісіть пісочне тісто й охолодіть 30 хвилин.</li><li>Наріжте яблука й змішайте з цукром та корицею.</li><li>Викладіть тісто у форму, додайте начинку, зробіть решітку.</li><li>Випікайте 45 хвилин при 180 °C.</li></ol>
+    <div class="actions"><button class="btn small timer-btn" type="button" data-min="45">⏱ Таймер на 45 хв</button><button class="btn small ghost print-btn" type="button">🖨 Друк</button></div>
+    <p class="timer-out" aria-live="polite"></p>
+  </div></article>
+</div>
+</main>
+<footer><div class="container"><p>&copy; 2026 Смачний блог. Тексти й ілюстрації — власні. Фото додаються з вказанням джерела.</p></div></footer>
+<button id="toTop" class="to-top" aria-label="Нагору">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
